@@ -1,0 +1,47 @@
+"light": [
+   [ "Purpose"                    , "Color"    , "Description"                             ],
+  
+   [ "Background"             , "#FFFFFF", "Clean, white base                      " ],
+   [ "Surface / Card"         , "#F5F8FA", "Soft light gray for surfaces or sections"],
+   [ "Primary Text "          , "#1A1A1A", "Deep neutral black for good contrast"    ],
+   [ "Secondary Text"         , "#555555", "Muted gray for less emphasis"            ],
+   [ "Accent / Primary Action", "#00A2FF", "Bright tech blue — call-to-action, links"],
+   [ "Accent Hover "          , "#0089D6", "Slightly darker blue for hover states"   ],
+   [ "Border / Divider"       , "#E0E6EB", "Light neutral for subtle lines or cards" ]
+    
+    
+  ],
+  
+
+  | Purpose                     | Color     | Description                                |
+| --------------------------- | --------- | ------------------------------------------ |
+| **Background**              | `#0E1217` | Rich dark blue-gray                        |
+| **Surface / Card**          | `#1C2128` | Slightly lighter surface for content areas |
+| **Primary Text**            | `#E6EAF0` | Near-white for readability                 |
+| **Secondary Text**          | `#A0A8B3` | Muted light gray                           |
+| **Accent / Primary Action** | `#00A2FF` | Keeps brand consistency                    |
+| **Accent Hover**            | `#33B7FF` | Brighter blue for hover                    |
+| **Border / Divider**        | `#2D333B` | Subtle separation of components            |
+
+
+WebDesignDev sections
+
+For Text cards
+
+🔹 Custom Websites That Convert
+We craft tailored websites built for performance, speed, and real results.
+
+🔹 UI/UX That Wows
+Intuitive, beautiful interfaces designed to delight users and drive engagement.
+
+🔹 Smart Marketing Strategies
+From SEO to social campaigns — we help you get seen and grow fast.
+
+🔹 Mobile-First Designs
+Optimized for all devices, so your business looks great everywhere.
+
+🔹 End-to-End Support
+From idea to launch — and beyond. We're your long-term tech partner.
+
+Note:: The cards will be animated in progression out with a fade out, 
+Three cards would be in DOM at any point in time so it would be a loop animation 

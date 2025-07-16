@@ -1,0 +1,38 @@
+{
+  "colors": {
+    "light": [
+      ["Purpose", "Color", "Description"],
+
+      ["Background", "#FFFFFF", "Clean, white base                      "],
+      ["Surface / Card", "#F5F8FA", "Soft light gray for surfaces or sections"],
+      ["Primary Text ", "#1A1A1A", "Deep neutral black for good contrast"],
+      ["Secondary Text", "#555555", "Muted gray for less emphasis"],
+      [
+        "Accent / Primary Action",
+        "#00A2FF",
+        "Bright tech blue — call-to-action, links"
+      ],
+      ["Accent Hover ", "#0089D6", "Slightly darker blue for hover states"],
+      ["Border / Divider", "#E0E6EB", "Light neutral for subtle lines or cards"]
+    ],
+    "dark": [
+      ["Purpose", "Color", "Description"],
+
+      ["Background", "#0E1217", " Rich dark blue-gray              "],
+      [
+        "Surface / Card",
+        "#1C2128",
+        "Slightly lighter surface for content areas"
+      ],
+      ["Primary Text", "#E6EAF0", " Near-white for readability     "],
+      ["Secondary Text", "#A0A8B3", " Muted light gray              "],
+      ["Accent / Primary Action", "#00A2FF", " Keeps brand consistency      "],
+      ["Accent Hover", "#33B7FF", "  Brighter blue for hover          "],
+      ["Border / Divider", "#2D333B", " Subtle separation of components    "]
+    ]
+  },
+  "fonts": {
+    "body": "inter",
+    "heading": "Orbitron"
+  }
+}
