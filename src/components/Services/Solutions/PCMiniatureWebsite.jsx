@@ -20,8 +20,7 @@ const PCMiniatureWebsite = ({ style = {} }) => {
         pb: 4,
         width: "100%",
         overflow: "hidden",
-        background:
-          "linear-gradient(249.18deg, #474747 18.79%, #363636 131.71%)",
+        background: "#00a2ff20",
         ...style,
       }}
     >
@@ -42,28 +41,30 @@ const NavBar = () => (
     sx={{ width: "100%" }}
   >
     <Grid component={ModMotionTranslate} dur={0.1} flexGrow={1}>
-      <Typography sx={{ fontSize: ".625rem", fontWeight: 700, color: "#fff" }}>
+      <Typography
+        sx={{ fontSize: ".625rem", fontWeight: 700, color: "text.primary" }}
+      >
         Brand Name
       </Typography>
     </Grid>
     <Typography
       component={ModMotionTranslate}
       dur={0.1}
-      sx={{ fontSize: ".625rem", fontWeight: 500, color: "#fff" }}
+      sx={{ fontSize: ".625rem", fontWeight: 500, color: "text.primary" }}
     >
       About
     </Typography>
     <Typography
       dur={0.1}
       component={ModMotionTranslate}
-      sx={{ fontSize: ".625rem", fontWeight: 500, color: "#fff" }}
+      sx={{ fontSize: ".625rem", fontWeight: 500, color: "text.primary" }}
     >
       Services
     </Typography>
     <Typography
       dur={0.1}
       component={ModMotionTranslate}
-      sx={{ fontSize: ".625rem", fontWeight: 500, color: "#fff" }}
+      sx={{ fontSize: ".625rem", fontWeight: 500, color: "text.primary" }}
     >
       Contact
     </Typography>
@@ -95,10 +96,10 @@ const HeroBody = () => (
             fontSize: ".875rem",
             fontWeight: 800,
             lineHeight: 1.2,
-            color: "#fff",
+            color: "text.primary",
           }}
         >
-          Transform Your Business With Our Functional Web Applications
+          Transform Your Business With Our Functional Web & Mobile Applications
         </Typography>
       </Grid>
       <Grid
@@ -121,7 +122,7 @@ const HeroBody = () => (
             borderRadius: "1px",
             fontWeight: 600,
             fontSize: ".5rem",
-            color: "#fff",
+            color: "text.primary",
 
             textTransform: "capitalize",
           }}
@@ -133,7 +134,7 @@ const HeroBody = () => (
           dur={0.2}
           component={MotionTranslateEl}
           variant="text"
-          sx={{ fontWeight: 800, fontSize: ".5rem", color: "#fff" }}
+          sx={{ fontWeight: 800, fontSize: ".5rem", color: "text.primary" }}
         >
           Get a Quote
         </Button>
@@ -168,13 +169,14 @@ const HeroBody = () => (
         />
         <Box
           sx={{
-            width: 171,
-            height: 14,
+            width: 115,
+            height: 10,
             borderRadius: "50%",
-            filter: "blur(2px)",
+            filter: "blur(5px)",
             background:
-              "linear-gradient(90deg, rgba(34, 34, 34, 0.91) 6.02%, rgba(85, 85, 85, 1) 106.02%)",
+              "linear-gradient(90deg, rgba(0, 0, 0, 1) 16.02%, rgba(85, 85, 85, 1) 106.02%)",
             position: "absolute",
+            opacity: 0.6,
             bottom: -10,
             left: "34%",
           }}

@@ -45,7 +45,7 @@ const Services = () => {
           <VideoEditing />
         </Grid>
       </Grid>
-      <Solutions />
+      {/* <Solutions /> */}
     </>
   );
 };

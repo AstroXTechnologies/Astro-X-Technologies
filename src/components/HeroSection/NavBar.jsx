@@ -17,8 +17,10 @@ import {
 import { styled } from "@mui/material/styles";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import LogoIcon from "../../../assets/svg/astrox-logo.svg?react";
 import LogoText from "../../../assets/svg/astrox-text.svg?react";
-import { motion } from "motion/react";
+import { motion, transform } from "motion/react";
+import GlassCard from "../subComponents/GlassCard";
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -34,23 +36,33 @@ const NavBar = () => {
       <TemporaryDrawer open={open} toggleDrawer={toggleDrawer} />
       <Grid size={12} sx={{ position: "relative" }}>
         {/* Animated Neon Lights */}
-        {mode == "light" && (
+
+        {true && (
           <NeonLight
-            color={"primary.main"}
+            color={"#000"}
             animate={{ x: [-20, 0, 20], y: [-20, 0, 20] }}
-            position={{ top: -80, left: -100 }}
+            position={{ top: -130, left: -150 }}
           />
         )}
-        {mode == "light" && (
+        {/* {true && (
           <NeonLight
-            color={"secondary.main"}
+            color={"primary.main"}
             animate={{ x: [-40, 0, 40], y: [-40, 0, 40] }}
             position={{ top: 90, right: -200 }}
           />
-        )}
+        )} */}
         <Box sx={{ px: 3, pt: 1, position: "relative", zIndex: 1 }}>
           <Grid container alignItems="center" sx={{ width: "100%" }}>
-            <Grid container alignItems="center" size={6}>
+            <Grid container alignItems="center" spacing={1} size={6}>
+              <Box
+                sx={{
+                  width: 25,
+
+                  display: "inline-block",
+                }}
+              >
+                <LogoIcon />
+              </Box>
               <Box sx={{ width: 60, display: "inline-block" }}>
                 <LogoText />
               </Box>
@@ -94,7 +106,7 @@ const NeonLight = ({ position, color, animate }) => (
           width: "300px",
           height: "300px",
           borderRadius: "50%",
-          filter: "blur(50px)",
+          filter: "blur(90px)",
           position: "absolute",
           zIndex: 0,
           bgcolor: color,

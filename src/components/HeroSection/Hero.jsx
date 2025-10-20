@@ -7,6 +7,8 @@ import GlassCard from "../subComponents/GlassCard";
 import { AnimatePresence, motion, transform, useInView } from "motion/react";
 import PCMiniatureWebsite from "../Services/Solutions/PCMiniatureWebsite";
 
+import bgVid from "../../../assets/vids/herovid_1.mp4";
+
 const Hero = () => {
   const { mode } = useColorScheme();
 
@@ -35,10 +37,28 @@ const Hero = () => {
       >
         <NavBar />
         <HeroBody />
-
-        {/* Display Card with an offset */}
       </Grid>
 
+      {mode === "dark" && (
+        <video
+          loop
+          autoPlay
+          src={bgVid}
+          muted
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            position: "absolute",
+            zIndex: 0,
+            top: 0,
+            left: 0,
+            opacity: 0.4,
+          }}
+        />
+      )}
+
+      {/* Display Card with an offset */}
       <Grid
         container
         justifyContent={"center"}

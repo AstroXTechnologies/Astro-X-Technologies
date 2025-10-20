@@ -9,6 +9,7 @@ import MotionTranslateUp from "../../subComponents/motionComponents/MotionTransl
 
 import LaunchIcon from "@mui/icons-material/Launch";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import LogoIcon from "../../../../assets/svg/astrox-logo.svg?react";
 
 const VideoEditing = () => {
   return (
@@ -60,7 +61,14 @@ const BentoGridVideos = () => (
             size={12}
             sx={{ height: window.innerWidth / 2 - padding }}
           >
-            <GlassCard spacing={false}>
+            <GlassCard
+              style={{
+                borderRight: "1px solid rgba(255, 0, 255, 0.6)",
+                borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+                borderBottom: "1px solid rgba(255, 0, 255, 0.9)",
+              }}
+              spacing={false}
+            >
               <Grid
                 container
                 direction={"column"}
@@ -82,7 +90,15 @@ const BentoGridVideos = () => (
             size={12}
             sx={{ height: window.innerWidth / 2 - padding }}
           >
-            <GlassCard spacing={false}>
+            <GlassCard
+              style={{
+                borderRight: "1px solid rgba(255, 0, 255, 0.9)",
+                borderTop: "1px solid rgba(255, 0, 255, 0.6)",
+                borderBottom: "1px solid rgba(255, 0, 255, 0.6)",
+                borderLeft: "1px solid rgba(255, 255, 255, 0.5)",
+              }}
+              spacing={false}
+            >
               <Grid
                 container
                 direction={"column"}
@@ -102,7 +118,15 @@ const BentoGridVideos = () => (
           </MotionTranslateUp>
         </GridMotionViewParent>
         <Grid container size={6} sx={{ height: "100%" }}>
-          <GlassCard spacing={false} style={{ position: "relative" }}>
+          <GlassCard
+            spacing={false}
+            style={{
+              position: "relative",
+              borderLeft: "1px solid rgba(255, 0, 255, 0.9)",
+              borderBottom: "1px solid rgba(255, 0, 255, 0.9)",
+              borderTop: "1px solid rgba(255, 255, 255, 0.5)",
+            }}
+          >
             <VideoButtons
               link={
                 "https://youtube.com/shorts/dh9RUgn-nYE?si=LdcN5B-f85i6yAq4"
@@ -117,12 +141,20 @@ const BentoGridVideos = () => (
               <source src={BentoVid2} type="video/mp4" />
             </video>
 
-            <VideoTitle title={"What does Sales do in a Business?"} />
+            {/* <VideoTitle title={"From Ideas to Digital Reality for Growth"} /> */}
+            <AstroXIconOverlay />
           </GlassCard>
         </Grid>
       </Grid>
       <Grid container size={12} sx={{ height: window.innerWidth / 2 }}>
-        <GlassCard spacing={false} style={{ position: "relative" }}>
+        <GlassCard
+          spacing={false}
+          style={{
+            position: "relative",
+            borderTop: "1px solid rgba(255, 0, 255, 0.9)",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.5)",
+          }}
+        >
           <VideoButtons
             link={"https://youtu.be/TMhXI-Z-LOA?si=mT64ib_5qDUxL0hH"}
           />
@@ -136,11 +168,13 @@ const BentoGridVideos = () => (
               <source src={BentoVid1} type="video/mp4" />
             </video>
           </Box>
-          <VideoTitle
+          {/* <VideoTitle
             title={
               "3 Life Lessons For Teenagers to Begin 2025 with MAXIMUM PRODUCTIVITY"
             }
-          />
+          /> */}
+
+          <AstroXIconOverlay />
         </GlassCard>
       </Grid>
     </Grid>
@@ -175,6 +209,8 @@ const VideoButtons = ({ link }) => {
         right: 0,
         zIndex: 2,
         width: "100%",
+        background: "rgba(0,0,0, .3)",
+        backdropFilter: "blur(20px)",
       }}
     >
       <Grid>
@@ -192,6 +228,26 @@ const VideoButtons = ({ link }) => {
     </Grid>
   );
 };
+
+const AstroXIconOverlay = () => (
+  <Box
+    component={GlassCard}
+    sx={{
+      backdropFilter: "blur(20px)",
+      background: "rgba(0,0,0,.3)",
+      borderRadius: "50%",
+      width: "initial",
+      height: "initial",
+      p: 1,
+      position: "absolute",
+      right: 8,
+      bottom: 8,
+      lineHeight: 0,
+    }}
+  >
+    <LogoIcon style={{ width: 20 }} />
+  </Box>
+);
 
 const VideoTitle = ({ title }) => (
   <Grid

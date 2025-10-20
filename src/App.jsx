@@ -10,6 +10,7 @@ import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
+import Info from "./components/Info/Info";
 
 // Create a custom theme
 
@@ -60,7 +61,7 @@ let theme = createTheme({
     fontOpticalSizing: "auto",
     h1: {
       fontFamily: '"Orbitron", sans-serif;',
-      fontSize: "2rem",
+      fontSize: "1.9rem",
       fontWeight: 800,
       lineHeight: 1.2,
       letterSpacing: 0.5,
@@ -127,12 +128,13 @@ theme = createTheme({
 });
 const App = () => {
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box sx={{ width: "100%", overflowX: "hidden" }}>
       <ThemeProvider theme={theme} defaultMode="dark" noSsr>
         <CssBaseline />
         <Hero />
         <Testimonials />
         <About />
+        <Info />
         <Services />
         <Contact />
         <Footer />

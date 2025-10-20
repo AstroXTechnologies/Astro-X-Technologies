@@ -30,7 +30,14 @@ const HeroBody = () => {
         container
         sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}
       >
-        <Grid sx={{ pt: 2, px: 3, maxWidth: 600, mt: "-20vh" }}>
+        <Grid
+          sx={{
+            pt: 2,
+            px: 3,
+            maxWidth: 600,
+            mt: "-20vh",
+          }}
+        >
           <AnimatedHeader pageLoaded={pageLoaded}>
             <Typography
               component={motion.h1}
@@ -38,38 +45,37 @@ const HeroBody = () => {
               variant="h1"
               sx={{ mb: 5 }}
             >
-              Transforming Ideas into Cutting Edge Solutions
+              Scalable Tech Solutions & MVPs That Power SME Growth
             </Typography>
             <Typography
               component={motion.p}
               variants={heroVariant}
               variant="body"
             >
-              You have a project? We'll build it. <br /> At Astroxtechnologies,
-              we harness the power of technology to create innovative solutions
-              that drive success.
+              We create IT solutions that empowers your business to scale &
+              scales with it.
+              <br />
+              We help businesses go from idea to execution — faster, smarter,
+              better.
             </Typography>
             <Grid
               container
               component={motion.div}
               size={12}
-              spacing={3}
+              spacing={2}
               variants={btnVariant}
               sx={{ pt: 5 }}
             >
+              <GetQuoteButton />
               <Link
                 component={motion.a}
                 variants={heroVariant}
-                href="#offer-card"
+                href="#contact-us"
               >
-                <Button
-                  variant="custom"
-                  sx={{ color: "#fff", bgcolor: "primary.main" }}
-                >
-                  Get A Free Website
+                <Button variant="text" sx={{ color: "primary.main" }}>
+                  Our Services
                 </Button>
               </Link>
-              <GetQuoteButton />
             </Grid>
           </AnimatedHeader>
         </Grid>
@@ -109,47 +115,21 @@ const GetQuoteButton = () => {
   return (
     <>
       <Box component={motion.div} variants={heroVariant}>
-        <Button variant="text" onClick={handleOpenQuote}>
-          Get a Quote
+        <Button
+          variant="custom"
+          sx={{
+            color: "#fff",
+            boxShadow:
+              "0px 8px 3px rgba(255, 0, 255, 0.01), 0px 4px 3px rgba(255, 0, 255, 0.05), 0px 2px 2px rgba(255, 0, 255, 0.09), 0px 0px 1px rgba(255, 0, 255, 0.1)",
+            background:
+              "linear-gradient(95.02deg, #B800B8 2.02%, #e000e0 82.06%, #e000e0 118.55%)",
+          }}
+          onClick={handleOpenQuote}
+        >
+          Contact Our Team
         </Button>
       </Box>
       <QuoteForm open={openQuoteForm} setOpen={setOpenQuoteForm} />
     </>
   );
 };
-
-// const GetQuoteButton = () => {
-//   const [open, setOpen] = useState(false);
-
-//   const handleTooltipClose = () => {
-//     setOpen(false);
-//   };
-
-//   const handleTooltipOpen = () => {
-//     setOpen(true);
-//   };
-//   return (
-//     <ClickAwayListener onClickAway={handleTooltipClose}>
-//       <Box component={motion.div} variants={heroVariant}>
-//         <Tooltip
-//           onClose={handleTooltipClose}
-//           open={open}
-//           disableFocusListener
-//           disableHoverListener
-//           title="Coming Soon! 🙂"
-//           placement="top"
-//           arrow
-//           slotProps={{
-//             popper: {
-//               disablePortal: true,
-//             },
-//           }}
-//         >
-//           <Button variant="text" onClick={handleTooltipOpen}>
-//             Get a Quote
-//           </Button>
-//         </Tooltip>
-//       </Box>
-//     </ClickAwayListener>
-//   );
-// };
