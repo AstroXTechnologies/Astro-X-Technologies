@@ -16,7 +16,7 @@ import useFirestore from "../../hooks/useFirestore";
 
 import Contact from "../Contact/Contact";
 import CancelScreen from "./CancelScreen";
-import SubmitResultSnackbar from "./SubmitResultSnackBar";
+import SubmitResultSnackbar from "./SubmitResultSnackbar";
 
 const SECTION_ID = "quote_form";
 

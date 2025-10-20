@@ -5,7 +5,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import Contact from "../../Contact/Contact";
 import CancelScreen from "../../subComponents/CancelScreen";
 import useFirestore from "../../../hooks/useFirestore";
-import SubmitResultSnackbar from "../../subComponents/SubmitResultSnackBar";
+import SubmitResultSnackbar from "../../subComponents/SubmitResultSnackbar";
 
 const SECTION_ID = "free-contact";
 

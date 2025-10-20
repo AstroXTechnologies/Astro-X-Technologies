@@ -20,7 +20,7 @@ import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import PlaceRoundedIcon from "@mui/icons-material/PlaceRounded";
 
-import SubmitResultSnackbar from "../subComponents/SubmitResultSnackBar";
+import SubmitResultSnackbar from "../subComponents/SubmitResultSnackbar";
 import useFirestore from "../../hooks/useFirestore";
 
 const Footer = () => {

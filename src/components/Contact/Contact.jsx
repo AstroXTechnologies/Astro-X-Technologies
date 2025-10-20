@@ -14,7 +14,7 @@ import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 import useFirestore from "../../hooks/useFirestore";
-import SubmitResultSnackbar from "../subComponents/SubmitResultSnackBar";
+import SubmitResultSnackbar from "../subComponents/SubmitResultSnackbar";
 
 const Contact = ({
   onSubmit = () => {},
