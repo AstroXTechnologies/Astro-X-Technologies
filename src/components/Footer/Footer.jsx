@@ -39,13 +39,27 @@ const Footer = () => {
     addEmail({ newsletterEmail: email }).then(() => setOpenSnackbar(true));
   };
   return (
-    <Grid container spacing={3} sx={{ pt: 10, px: 3, width: "100%" }}>
+    <Grid
+      container
+      spacing={3}
+      sx={{
+        pt: { xs: 8, sm: 10, md: 12 },
+        px: { xs: 2, sm: 3, md: 4 },
+        width: "100%",
+        maxWidth: 1200,
+        mx: "auto",
+      }}
+    >
       <Grid size={12} sx={{ pb: 0 }}>
         <Divider />
       </Grid>
-      {/* Sections & Info */}
-      <Grid container size={12} spacing={2}>
-        <Grid direction={"column"} spacing={0.5} container size={6}>
+      <Grid container size={12} spacing={{ xs: 3, sm: 2 }}>
+        <Grid
+          direction={"column"}
+          spacing={0.5}
+          container
+          size={{ xs: 6, sm: 4, md: 3 }}
+        >
           <Grid>
             <Typography variant="h4">Sections</Typography>
           </Grid>
@@ -75,7 +89,12 @@ const Footer = () => {
             </Link>
           </Grid>
         </Grid>
-        <Grid container direction={"column"} spacing={1} size={6}>
+        <Grid
+          container
+          direction={"column"}
+          spacing={1}
+          size={{ xs: 6, sm: 4, md: 3 }}
+        >
           <Grid>
             <Typography variant="h4">Info</Typography>
           </Grid>
@@ -97,17 +116,23 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      {/* Newsletter Section */}
       <Grid size={12} container spacing={1}>
         <Grid size={12}>
-          <Typography variant="h5">Subscribe to our Newsletter!</Typography>
+          <Typography variant="h5" sx={{ fontWeight: 600 }}>
+            Subscribe to our Newsletter!
+          </Typography>
         </Grid>
-        <Grid size={12} container spacing={3}>
+        <Grid
+          size={12}
+          container
+          spacing={{ xs: 2, sm: 3 }}
+          sx={{ flexDirection: { xs: "column", sm: "row" } }}
+        >
           <TextField
             id="email"
             variant="standard"
             helperText="Enter your Email"
-            sx={{ flex: 1, maxWidth: 300 }}
+            sx={{ flex: 1, maxWidth: { xs: "100%", sm: 300 } }}
             slotProps={{
               input: {
                 startAdornment: (
@@ -132,8 +157,7 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      {/* Social Media links */}
-      <Grid container rowSpacing={1}>
+      <Grid container rowSpacing={1} columnSpacing={2}>
         <Grid size={12}>
           <Typography variant="body2">Follow or Reach Us on:</Typography>
         </Grid>
@@ -171,8 +195,12 @@ const Footer = () => {
         </Link>
       </Grid>
 
-      {/* Contact Information */}
-      <Grid container size={12} spacing={1} direction={"column"}>
+      <Grid
+        container
+        size={12}
+        spacing={{ xs: 1.5, sm: 1 }}
+        direction={"column"}
+      >
         <Grid>
           <Typography variant="h5">Contact Information</Typography>
         </Grid>
@@ -236,8 +264,12 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      {/* Copyright */}
-      <Grid container size={12} justifyContent={"center"} sx={{ pb: 1 }}>
+      <Grid
+        container
+        size={12}
+        justifyContent={"center"}
+        sx={{ pb: { xs: 2, sm: 1 }, pt: { xs: 2, sm: 1 } }}
+      >
         <Typography variant="body2">
           @ Astro X Technologies {new Date().getFullYear()}
         </Typography>

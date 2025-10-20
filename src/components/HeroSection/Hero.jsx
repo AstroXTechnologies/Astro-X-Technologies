@@ -21,18 +21,20 @@ const Hero = () => {
         sx={{
           width: "100%",
           maxWidth: "100vw",
-          height: "100vh",
+          minHeight: "100vh",
+          height: "auto",
           position: "relative",
           [`${mode == "dark" ? "background" : "bgcolor"}`]: `${
             mode == "dark"
               ? `linear-gradient(
  to bottom,
  #0a0a0a 0%,
-    #121212 50%,
-    #1a1a1a 100%
+    #0f0f0f 50%,
+    #141414 100%
 )`
               : "background.paper"
           }`,
+          pb: { xs: 15, sm: 18, md: 20 },
         }}
       >
         <NavBar />
@@ -58,17 +60,20 @@ const Hero = () => {
         />
       )}
 
-      {/* Display Card with an offset */}
       <Grid
         container
         justifyContent={"center"}
-        sx={{ mt: "-100px", zIndex: 1, position: "relative" }}
+        sx={{
+          mt: { xs: "-80px", sm: "-100px", md: "-120px" },
+          zIndex: 1,
+          position: "relative",
+          px: 2,
+        }}
       >
         <Box
           sx={{
-            width: "90%",
-            minWidth: 360,
-            maxWidth: 400,
+            width: "100%",
+            maxWidth: { xs: 360, sm: 400, md: 450 },
           }}
         >
           <DataOverlayCard />

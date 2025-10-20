@@ -14,15 +14,36 @@ const About = () => {
         id="about-us"
         container
         spacing={7}
-        sx={{ width: "100%", px: 3, pt: 10 }}
+        sx={{
+          width: "100%",
+          px: { xs: 2, sm: 3, md: 4 },
+          pt: { xs: 8, sm: 10, md: 12 },
+          maxWidth: 1200,
+          mx: "auto",
+        }}
       >
         {/* About Us Header */}
         <GridMotionViewParent spacing={1} size={12}>
           <MotionTranslateUp size={12}>
-            <Typography variant="h3">About Us</Typography>
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                mb: 1,
+              }}
+            >
+              About Us
+            </Typography>
           </MotionTranslateUp>
           <MotionTranslateUp size={12}>
-            <Typography variant="h2">
+            <Typography
+              variant="h5"
+              sx={{
+                color: "text.secondary",
+                fontWeight: 400,
+                maxWidth: 700,
+              }}
+            >
               Innovation and Creativity — The Core of our Operation.
             </Typography>
           </MotionTranslateUp>
@@ -33,9 +54,9 @@ const About = () => {
           component={GridMotionViewParent}
           inView={0.3}
           container
-          spacing={7}
+          spacing={{ xs: 4, sm: 5, md: 7 }}
           size={12}
-          sx={{ maxWidth: 500 }}
+          sx={{ maxWidth: { xs: "100%", sm: 500, md: 600 } }}
         >
           <Grid component={MotionTranslateUp} container spacing={2} size={12}>
             <Grid
@@ -177,9 +198,9 @@ const HeaderUnderline = () => (
   <Box
     sx={{
       width: "100%",
-      height: "1px",
-      background: "linear-gradient(45deg, #ff00ff, #00FF7F)",
-      borderRadius: "50%",
+      height: "2px",
+      background: "linear-gradient(90deg, #0066FF 0%, #00D9FF 100%)",
+      borderRadius: "2px",
     }}
   />
 );

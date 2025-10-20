@@ -127,16 +127,35 @@ const Contact = ({
         id="contact-us"
         container
         spacing={4}
-        sx={{ width: "100%", px: 3, pt: standalone ? 10 : 0 }}
+        sx={{
+          width: "100%",
+          px: { xs: 2, sm: 3, md: 4 },
+          pt: standalone ? { xs: 8, sm: 10, md: 12 } : 0,
+          maxWidth: 1200,
+          mx: "auto",
+        }}
       >
-        <Grid container spacing={1} size={12}>
+        <Grid container spacing={2} size={12}>
           <Grid size={12}>
-            <Typography variant="h3">
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                mb: 1,
+              }}
+            >
               {standalone ? "Contact Us" : header ? header : "Contact Us"}
             </Typography>
           </Grid>
           <Grid size={12}>
-            <Typography variant="h4">
+            <Typography
+              variant="h5"
+              sx={{
+                color: "text.secondary",
+                fontWeight: 400,
+                maxWidth: 600,
+              }}
+            >
               {standalone
                 ? "Reach out — we're ready to build something great with you."
                 : subHeader
@@ -154,7 +173,7 @@ const Contact = ({
                 </Typography>
               </Grid>
             )}
-            <Grid flex={1} sx={{ maxWidth: 200 }}>
+            <Grid flex={1} sx={{ maxWidth: { xs: "100%", sm: 200 }, minWidth: { xs: "100%", sm: 180 } }}>
               <TextField
                 name="first-name"
                 error={formData.fName.error}
@@ -175,7 +194,7 @@ const Contact = ({
                 }}
               />
             </Grid>
-            <Grid flex={1} sx={{ maxWidth: 200 }}>
+            <Grid flex={1} sx={{ maxWidth: { xs: "100%", sm: 200 }, minWidth: { xs: "100%", sm: 180 } }}>
               <TextField
                 name="last-name"
                 error={formData.lName.error}
@@ -206,7 +225,7 @@ const Contact = ({
               helperText="Enter your phone No"
               variant="filled"
               label="Phone No"
-              sx={{ width: "100%", maxWidth: 416 }}
+              sx={{ width: "100%", maxWidth: { xs: "100%", sm: 416 } }}
               slotProps={{
                 input: {
                   startAdornment: (
@@ -227,7 +246,7 @@ const Contact = ({
               helperText="Enter your Email"
               variant="filled"
               label="Email"
-              sx={{ width: "100%", maxWidth: 416 }}
+              sx={{ width: "100%", maxWidth: { xs: "100%", sm: 416 } }}
               slotProps={{
                 input: {
                   startAdornment: (
@@ -254,7 +273,7 @@ const Contact = ({
               variant="filled"
               label="Message"
               helperText="Send Us a Message"
-              sx={{ width: "100%", maxWidth: 416 }}
+              sx={{ width: "100%", maxWidth: { xs: "100%", sm: 416 } }}
               multiline
               rows={4}
             />
@@ -267,7 +286,7 @@ const Contact = ({
               loading={isLoading || standaloneLoading}
               fullWidth
               loadingPosition="start"
-              sx={{ width: "100%", maxWidth: 416 }}
+              sx={{ width: "100%", maxWidth: { xs: "100%", sm: 416 } }}
               onClick={() => {
                 handleSubmitData();
               }}

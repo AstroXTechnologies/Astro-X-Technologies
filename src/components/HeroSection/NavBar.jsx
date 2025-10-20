@@ -51,32 +51,61 @@ const NavBar = () => {
             position={{ top: 90, right: -200 }}
           />
         )} */}
-        <Box sx={{ px: 3, pt: 1, position: "relative", zIndex: 1 }}>
+        <Box
+          sx={{
+            px: { xs: 2, sm: 3, md: 4 },
+            py: { xs: 1.5, sm: 2 },
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
           <Grid container alignItems="center" sx={{ width: "100%" }}>
-            <Grid container alignItems="center" spacing={1} size={6}>
+            <Grid
+              container
+              alignItems="center"
+              spacing={1}
+              size={{ xs: 6, sm: 4 }}
+            >
               <Box
                 sx={{
-                  width: 25,
-
+                  width: { xs: 22, sm: 25, md: 28 },
                   display: "inline-block",
                 }}
               >
                 <LogoIcon />
               </Box>
-              <Box sx={{ width: 60, display: "inline-block" }}>
+              <Box
+                sx={{
+                  width: { xs: 55, sm: 60, md: 70 },
+                  display: "inline-block",
+                }}
+              >
                 <LogoText />
               </Box>
             </Grid>
-            <Grid container alignItems="center" size={6}>
-              {/* Switch to control the color theme of the app */}
-              <Grid sx={{ flexGrow: 1 }}>
+            <Grid
+              container
+              alignItems="center"
+              size={{ xs: 6, sm: 8 }}
+              justifyContent="flex-end"
+            >
+              <Grid sx={{ mr: 1 }}>
                 <MaterialUISwitch
                   checked={mode == "dark" ? true : false}
                   onChange={(e) => setMode(e.target.checked ? "dark" : "light")}
                 />
               </Grid>
               <Grid>
-                <IconButton color="primary" onClick={toggleDrawer(true)}>
+                <IconButton
+                  color="primary"
+                  onClick={toggleDrawer(true)}
+                  sx={{
+                    transition: "transform 0.2s",
+                    "&:hover": {
+                      transform: "scale(1.1)",
+                    },
+                  }}
+                >
                   <MenuIcon fontSize="medium" sx={{ color: "text.primary" }} />
                 </IconButton>
               </Grid>

@@ -31,19 +31,44 @@ const Testimonials = () => {
           container
           spacing={5}
           justifyContent={"center"}
-          sx={{ position: "relative", zIndex: 1, px: 3, pt: 10 }}
+          sx={{
+            position: "relative",
+            zIndex: 1,
+            px: { xs: 2, sm: 3, md: 4 },
+            pt: { xs: 8, sm: 10, md: 12 },
+            maxWidth: 1200,
+            mx: "auto",
+          }}
         >
           <GridMotionViewParent spacing={1}>
             <MotionTranslateUp size={12}>
-              <Typography variant="h3">Testimonials</Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontWeight: 700,
+                  mb: 1,
+                }}
+              >
+                Testimonials
+              </Typography>
             </MotionTranslateUp>
             <MotionTranslateUp size={12}>
-              <Typography variant="h2">
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "text.secondary",
+                  fontWeight: 400,
+                  maxWidth: 700,
+                }}
+              >
                 Trusted by Innovators, Creators, and Brands.
               </Typography>
             </MotionTranslateUp>
             <MotionTranslateUp sx={{ pt: 2 }}>
-              <Typography variant="body2" color="textDisabled">
+              <Typography
+                variant="body1"
+                sx={{ color: "text.secondary", maxWidth: 600 }}
+              >
                 Trusted by teams, founders, and creators worldwide — our work
                 delivers results that people remember and talk about.
               </Typography>
@@ -54,8 +79,8 @@ const Testimonials = () => {
             container
             direction="column"
             spacing={4}
-            size={9}
-            sx={{ maxWidth: 320 }}
+            size={{ xs: 12, sm: 10, md: 9 }}
+            sx={{ maxWidth: { xs: "100%", sm: 400, md: 450 } }}
           >
             <TestimonialCard
               avatarSrc={avatarSrc2}

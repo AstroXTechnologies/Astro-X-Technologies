@@ -26,16 +26,16 @@ const HeroBody = () => {
       <Grid
         ref={rootRef}
         alignItems={"center"}
-        justifyContent={"flex-start"}
+        justifyContent={"center"}
         container
-        sx={{ flexGrow: 1, position: "relative", zIndex: 10 }}
+        sx={{ flexGrow: 1, position: "relative", zIndex: 10, px: { xs: 2, sm: 3, md: 4 } }}
       >
         <Grid
           sx={{
-            pt: 2,
-            px: 3,
-            maxWidth: 600,
-            mt: "-20vh",
+            pt: { xs: 4, sm: 2 },
+            maxWidth: { xs: "100%", sm: 600, md: 700 },
+            mt: { xs: "-10vh", sm: "-15vh", md: "-20vh" },
+            textAlign: { xs: "center", sm: "left" },
           }}
         >
           <AnimatedHeader pageLoaded={pageLoaded}>
@@ -43,20 +43,27 @@ const HeroBody = () => {
               component={motion.h1}
               variants={heroVariant}
               variant="h1"
-              sx={{ mb: 5 }}
+              sx={{
+                mb: { xs: 3, sm: 4, md: 5 },
+                fontWeight: 900,
+              }}
             >
               Scalable Tech Solutions & MVPs That Power SME Growth
             </Typography>
             <Typography
               component={motion.p}
               variants={heroVariant}
-              variant="body"
+              variant="body1"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1.125rem" },
+                color: "text.secondary",
+                maxWidth: 580,
+                mx: { xs: "auto", sm: 0 },
+              }}
             >
-              We create IT solutions that empowers your business to scale &
-              scales with it.
-              <br />
-              We help businesses go from idea to execution — faster, smarter,
-              better.
+              We create IT solutions that empower your business to scale and
+              grow with it. We help businesses go from idea to execution —
+              faster, smarter, better.
             </Typography>
             <Grid
               container
@@ -64,15 +71,29 @@ const HeroBody = () => {
               size={12}
               spacing={2}
               variants={btnVariant}
-              sx={{ pt: 5 }}
+              sx={{
+                pt: { xs: 4, sm: 5 },
+                justifyContent: { xs: "center", sm: "flex-start" },
+              }}
             >
               <GetQuoteButton />
               <Link
                 component={motion.a}
                 variants={heroVariant}
-                href="#contact-us"
+                href="#services"
+                underline="none"
               >
-                <Button variant="text" sx={{ color: "primary.main" }}>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "primary.main",
+                    borderColor: "primary.main",
+                    "&:hover": {
+                      borderColor: "primary.dark",
+                      backgroundColor: "rgba(0, 102, 255, 0.04)",
+                    },
+                  }}
+                >
                   Our Services
                 </Button>
               </Link>
@@ -117,14 +138,12 @@ const GetQuoteButton = () => {
       <Box component={motion.div} variants={heroVariant}>
         <Button
           variant="custom"
-          sx={{
-            color: "#fff",
-            boxShadow:
-              "0px 8px 3px rgba(255, 0, 255, 0.01), 0px 4px 3px rgba(255, 0, 255, 0.05), 0px 2px 2px rgba(255, 0, 255, 0.09), 0px 0px 1px rgba(255, 0, 255, 0.1)",
-            background:
-              "linear-gradient(95.02deg, #B800B8 2.02%, #e000e0 82.06%, #e000e0 118.55%)",
-          }}
           onClick={handleOpenQuote}
+          sx={{
+            px: { xs: 3, sm: 4 },
+            py: { xs: 1.5, sm: 1.75 },
+            fontSize: { xs: "0.9375rem", sm: "1rem" },
+          }}
         >
           Contact Our Team
         </Button>

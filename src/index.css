@@ -1,9 +1,17 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .orbitron {
@@ -18,4 +26,16 @@ html {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
 }
